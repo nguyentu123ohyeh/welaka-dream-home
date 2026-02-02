@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, User } from "lucide-react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -21,8 +21,7 @@ const Contact = () => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
-      description:
-        "Thank you for reaching out. Madeline will get back to you soon.",
+      description: "Thank you for reaching out. Madeline will get back to you soon.",
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
@@ -38,14 +37,14 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        {/* Hero */}
+        {/* Hero Section */}
         <section className="gradient-coastal section-padding">
           <div className="container-luxury text-center">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="caption-elegant text-driftwood mb-4"
+              className="caption-elegant text-driftwood mb-4 uppercase tracking-[0.3em]"
             >
               Personal Concierge
             </motion.p>
@@ -73,7 +72,8 @@ const Contact = () => {
         <section className="section-padding">
           <div className="container-luxury">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-              {/* Contact Form */}
+              
+              {/* Left Column: Contact Form */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -86,10 +86,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                         Your Name
                       </label>
                       <Input
@@ -103,10 +100,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-medium text-foreground mb-2"
-                      >
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                         Email Address
                       </label>
                       <Input
@@ -122,10 +116,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                       Subject
                     </label>
                     <Input
@@ -139,10 +130,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-foreground mb-2"
-                    >
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                       Your Message
                     </label>
                     <Textarea
@@ -168,7 +156,7 @@ const Contact = () => {
                 </form>
               </motion.div>
 
-              {/* Contact Info */}
+              {/* Right Column: Contact Info */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -185,6 +173,20 @@ const Contact = () => {
                 </p>
 
                 <div className="space-y-6">
+                  {/* --- KHỐI THÔNG TIN FOUNDER MỚI --- */}
+                  <div className="flex items-start gap-4 p-4 rounded-lg bg-card border border-accent/20">
+                    <div className="w-12 h-12 rounded-full bg-accent/50 flex items-center justify-center flex-shrink-0">
+                      <User className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-primary">Founder & Curator</p>
+                      <p className="text-muted-foreground font-serif italic text-lg">
+                        Madeline Marie Mellen
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Email Block */}
                   <a
                     href="mailto:kennanstropmfh6@hotmail.com"
                     className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-accent/30 transition-colors group"
@@ -202,6 +204,7 @@ const Contact = () => {
                     </div>
                   </a>
 
+                  {/* Phone Block */}
                   <a
                     href="tel:+14092568329"
                     className="flex items-start gap-4 p-4 rounded-lg bg-card hover:bg-accent/30 transition-colors group"
@@ -217,12 +220,13 @@ const Contact = () => {
                     </div>
                   </a>
 
+                  {/* Address Block */}
                   <div className="flex items-start gap-4 p-4 rounded-lg bg-card">
                     <div className="w-12 h-12 rounded-full bg-accent/50 flex items-center justify-center flex-shrink-0">
                       <MapPin className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="font-medium text-primary">Visit Us</p>
+                      <p className="font-medium text-primary">Visit Our Studio</p>
                       <p className="text-muted-foreground">
                         112 Cherry Drive
                         <br />
@@ -232,7 +236,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                {/* Hours */}
+                {/* Business Hours */}
                 <div className="mt-8 p-6 bg-accent/30 rounded-lg">
                   <h3 className="font-serif text-lg text-primary mb-3">
                     Business Hours
