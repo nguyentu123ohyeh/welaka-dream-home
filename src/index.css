@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Welaka Breeze Design System - Coastal Florida Luxury */
+
+@layer base {
+  :root {
+    /* Core Palette - Warm Coastal */
+    --background: 35 33% 98%;
+    --foreground: 192 25% 20%;
+
+    --card: 35 30% 97%;
+    --card-foreground: 192 25% 20%;
+
+    --popover: 35 33% 98%;
+    --popover-foreground: 192 25% 20%;
+
+    /* Primary - Deep Sea Teal */
+    --primary: 192 30% 25%;
+    --primary-foreground: 35 33% 98%;
+
+    /* Secondary - Warm Sand */
+    --secondary: 32 25% 88%;
+    --secondary-foreground: 192 25% 20%;
+
+    /* Muted - Soft Driftwood */
+    --muted: 32 18% 92%;
+    --muted-foreground: 32 15% 45%;
+
+    /* Accent - Ocean Mist Blue */
+    --accent: 198 35% 78%;
+    --accent-foreground: 192 30% 20%;
+
+    /* Coastal Sage */
+    --coastal-sage: 145 15% 75%;
+    --coastal-sage-foreground: 145 20% 25%;
+
+    /* Warm Cream */
+    --cream: 38 40% 95%;
+    --cream-foreground: 32 30% 25%;
+
+    /* Driftwood */
+    --driftwood: 32 20% 55%;
+    --driftwood-foreground: 35 33% 98%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 32 20% 88%;
+    --input: 32 20% 88%;
+    --ring: 198 35% 60%;
+
+    --radius: 0.5rem;
+
+    /* Custom Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(32 20% 50% / 0.15);
+    --shadow-elevated: 0 12px 40px -8px hsl(32 20% 50% / 0.2);
+    --shadow-glow: 0 0 30px hsl(198 35% 78% / 0.3);
+
+    /* Sidebar - Coastal Theme */
+    --sidebar-background: 35 30% 97%;
+    --sidebar-foreground: 192 25% 25%;
+    --sidebar-primary: 192 30% 25%;
+    --sidebar-primary-foreground: 35 33% 98%;
+    --sidebar-accent: 32 25% 90%;
+    --sidebar-accent-foreground: 192 25% 20%;
+    --sidebar-border: 32 20% 88%;
+    --sidebar-ring: 198 35% 60%;
+  }
+
+  .dark {
+    --background: 192 25% 10%;
+    --foreground: 35 30% 95%;
+
+    --card: 192 22% 12%;
+    --card-foreground: 35 30% 95%;
+
+    --popover: 192 22% 12%;
+    --popover-foreground: 35 30% 95%;
+
+    --primary: 198 35% 75%;
+    --primary-foreground: 192 25% 10%;
+
+    --secondary: 32 15% 20%;
+    --secondary-foreground: 35 30% 95%;
+
+    --muted: 192 20% 18%;
+    --muted-foreground: 32 15% 65%;
+
+    --accent: 198 30% 35%;
+    --accent-foreground: 35 30% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 35 30% 95%;
+
+    --border: 192 20% 20%;
+    --input: 192 20% 20%;
+    --ring: 198 35% 50%;
+
+    --sidebar-background: 192 22% 10%;
+    --sidebar-foreground: 35 30% 90%;
+    --sidebar-primary: 198 35% 70%;
+    --sidebar-primary-foreground: 192 25% 10%;
+    --sidebar-accent: 192 18% 18%;
+    --sidebar-accent-foreground: 35 30% 90%;
+    --sidebar-border: 192 20% 20%;
+    --sidebar-ring: 198 35% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  /* Elegant underline animation for links */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-current transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Soft fade-in animation */
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Gentle float animation */
+  .float-gentle {
+    animation: floatGentle 6s ease-in-out infinite;
+  }
+
+  @keyframes floatGentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Coastal gradient backgrounds */
+  .gradient-coastal {
+    background: linear-gradient(
+      135deg,
+      hsl(35 33% 98%) 0%,
+      hsl(32 25% 93%) 50%,
+      hsl(198 35% 92%) 100%
+    );
+  }
+
+  .gradient-ocean {
+    background: linear-gradient(
+      180deg,
+      hsl(198 35% 85%) 0%,
+      hsl(198 30% 92%) 100%
+    );
+  }
+
+  .gradient-sand {
+    background: linear-gradient(
+      180deg,
+      hsl(32 25% 95%) 0%,
+      hsl(35 30% 90%) 100%
+    );
+  }
+
+  /* Image hover effect */
+  .image-coastal {
+    @apply overflow-hidden;
+  }
+
+  .image-coastal img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .image-coastal:hover img {
+    @apply scale-105;
+  }
+
+  /* Card hover elevation */
+  .card-coastal {
+    @apply transition-all duration-500 ease-out;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .card-coastal:hover {
+    box-shadow: var(--shadow-elevated);
+    @apply -translate-y-1;
+  }
+
+  /* Text gradient */
+  .text-gradient-coastal {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(192 30% 25%) 0%,
+      hsl(198 35% 40%) 100%
+    );
+  }
+}
+
+@layer utilities {
+  /* Custom spacing for luxury feel */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-luxury {
+    @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  /* Typography utilities */
+  .heading-display {
+    @apply text-4xl md:text-5xl lg:text-6xl font-medium leading-tight;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-medium leading-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .caption-elegant {
+    @apply text-sm tracking-widest uppercase font-medium;
+  }
+}
