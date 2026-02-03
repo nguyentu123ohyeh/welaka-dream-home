@@ -15,7 +15,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Welaka Breeze custom variants
+        // Madeline Marie Mellen custom variants
         sanctuary: "bg-primary text-primary-foreground hover:bg-primary/85 shadow-soft hover:shadow-elevated font-sans tracking-wide",
         coastal: "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-primary-foreground font-sans tracking-wide",
         subtle: "bg-secondary/60 text-secondary-foreground hover:bg-secondary font-sans",

@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex flex-col items-start">
             <span className="font-serif text-2xl tracking-wide text-primary">
-              Welaka Breeze
+              Madeline Marie Mellen
             </span>
             <span className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
               by Madeline Marie Mellen

@@ -23,7 +23,7 @@ const TestimonialSection = () => {
               Madeline Marie Mellen
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              Founder & Curator, Welaka Breeze
+              Founder & Curator, Madeline Marie Mellen
             </p>
           </div>
         </motion.div>

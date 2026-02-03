@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-6">
               <span className="font-serif text-3xl tracking-wide">
-                Welaka Breeze
+                Madeline Marie Mellen
               </span>
             </Link>
             <p className="text-primary-foreground/80 leading-relaxed max-w-md mb-6">
@@ -80,7 +80,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/60">
-            © 2024 Welaka Breeze. All rights reserved.
+            © 2024 Madeline Marie Mellen. All rights reserved.
           </p>
           <p className="text-sm text-primary-foreground/60">
             Crafted with care in Florida

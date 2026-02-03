@@ -66,7 +66,7 @@ const About = () => {
                     for true renewal.
                   </p>
                   <p>
-                    Every piece at Welaka Breeze is curated with intention. I
+                    Every piece at Madeline Marie Mellen is curated with intention. I
                     personally source materials that breathe with our Florida
                     climate, work with artisans who share our values, and test
                     everything in my own home before it reaches yours.
@@ -88,7 +88,7 @@ const About = () => {
                 <div className="aspect-[4/5] rounded-lg overflow-hidden shadow-elevated">
                   <img
                     src={heroImage}
-                    alt="Welaka Breeze aesthetic"
+                    alt="Madeline Marie Mellen aesthetic"
                     className="w-full h-full object-cover"
                   />
                 </div>
